@@ -7,11 +7,21 @@
     <servlet-name>Test</servlet-name>
     <servlet-class>com.ocr.servlets.Test</servlet-class>
   </servlet>
+  
+    <servlet>
+    <servlet-name>Forms</servlet-name>
+    <servlet-class>com.ocr.servlets.Forms</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   
+   <servlet-mapping>
+    <servlet-name>Forms</servlet-name>
+    <url-pattern>/forms</url-pattern>
+  </servlet-mapping> 
   
     <jsp-config>
         <jsp-property-group>
