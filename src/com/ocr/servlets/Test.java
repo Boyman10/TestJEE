@@ -35,6 +35,8 @@ public class Test extends HttpServlet {
 		myAuth.setFirstname("Bill");
 		myAuth.setName("Cozby");
 		
+		String[] titles = {"§New title","Other title"};
+		request.setAttribute("titles", titles);
 		request.setAttribute("author", myAuth);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 	}
