@@ -16,7 +16,7 @@ import com.ocr.forms.Connection;
  */
 @WebServlet("/Forms")
 public class Forms extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 4L;
        
     /**
      * @see HttpServlet#HttpServlet()

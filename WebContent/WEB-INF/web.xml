@@ -8,9 +8,14 @@
     <servlet-class>com.ocr.servlets.Test</servlet-class>
   </servlet>
   
-    <servlet>
+  <servlet>
     <servlet-name>Forms</servlet-name>
     <servlet-class>com.ocr.servlets.Forms</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Session</servlet-name>
+    <servlet-class>com.ocr.servlets.Session</servlet-class>
   </servlet>
   
   <servlet>
@@ -42,6 +47,12 @@
     <url-pattern>/file</url-pattern>
   </servlet-mapping> 
   
+  <servlet-mapping>
+    <servlet-name>Session</servlet-name>
+    <url-pattern>/session</url-pattern>
+  </servlet-mapping>
+  
+    
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

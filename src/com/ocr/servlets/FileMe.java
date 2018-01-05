@@ -22,7 +22,7 @@ import com.ocr.forms.Connection;
 @WebServlet("/FileMe")
 public class FileMe extends HttpServlet {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 3L;
     
 	// A few configuration parameters for file upload :
 	public static final int SIZE_TAMPON = 10240;
