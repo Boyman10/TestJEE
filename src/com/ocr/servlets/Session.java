@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class Session
  * Working with sessions
  */
-@WebServlet("/Test")
+@WebServlet("/Session")
 public class Session extends HttpServlet {
 	private static final long serialVersionUID = 2L;
 	       
@@ -30,6 +30,14 @@ public class Session extends HttpServlet {
 		 */
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+			// Get the session parameter : 
+			
+			HttpSession sess = request.getSession();
+			String login = (String) sess.getAttribute("login");
+			
+			// in case of logout :
+			//sess.invalidate();
+			
 			this.getServletContext().getRequestDispatcher("/WEB-INF/session.jsp").forward(request, response);
 		}
 

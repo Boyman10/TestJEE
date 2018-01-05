@@ -7,7 +7,7 @@
 <body>
 <h4>Working with session now</h4>
 
-	<c:if test="${!empty sessionScore.name && !empty sessionScore.login}">
+	<c:if test="${!empty sessionScope.name && !empty sessionScope.login}">
 		<p>You are ${sessionScope.name}</p>
 	</c:if>
 
