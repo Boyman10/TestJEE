@@ -1,62 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0"
-  xmlns="http://java.sun.com/xml/ns/javaee"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <servlet>
     <servlet-name>Test</servlet-name>
     <servlet-class>com.ocr.servlets.Test</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>Forms</servlet-name>
     <servlet-class>com.ocr.servlets.Forms</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>Session</servlet-name>
     <servlet-class>com.ocr.servlets.Session</servlet-class>
   </servlet>
   
   <servlet>
+    <servlet-name>Cooky</servlet-name>
+    <servlet-class>com.ocr.servlets.Cooky</servlet-class>
+  </servlet>  
+  <servlet>
     <servlet-name>FileMe</servlet-name>
     <servlet-class>com.ocr.servlets.FileMe</servlet-class>
     <multipart-config>
-            <location>/home/bob/Downloads/</location> <!-- customize folder to store files -->
-            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
-            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
-            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+      <location>/home/bob/Downloads/</location>
+      <max-file-size>10485760</max-file-size>
+      <max-request-size>52428800</max-request-size>
+      <file-size-threshold>1048576</file-size-threshold>
     </multipart-config>
-    
-    
   </servlet>
-  
-  
   <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
-  
-   <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>Forms</servlet-name>
     <url-pattern>/forms</url-pattern>
-  </servlet-mapping> 
-  
-     <servlet-mapping>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>FileMe</servlet-name>
     <url-pattern>/file</url-pattern>
-  </servlet-mapping> 
-  
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>Session</servlet-name>
     <url-pattern>/session</url-pattern>
   </servlet-mapping>
   
-    
-    <jsp-config>
-        <jsp-property-group>
-            <url-pattern>*.jsp</url-pattern>
-            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
-        </jsp-property-group>
-    </jsp-config>
+  <servlet-mapping>
+    <servlet-name>Cooky</servlet-name>
+    <url-pattern>/cookie</url-pattern>
+  </servlet-mapping>  
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>
