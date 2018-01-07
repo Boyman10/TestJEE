@@ -12,10 +12,14 @@
     <servlet-name>Session</servlet-name>
     <servlet-class>com.ocr.servlets.Session</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>Cooky</servlet-name>
     <servlet-class>com.ocr.servlets.Cooky</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>TestBDD</servlet-name>
+    <servlet-class>com.ocr.servlets.TestBDD</servlet-class>
   </servlet>  
   <servlet>
     <servlet-name>FileMe</servlet-name>
@@ -43,10 +47,13 @@
     <servlet-name>Session</servlet-name>
     <url-pattern>/session</url-pattern>
   </servlet-mapping>
-  
   <servlet-mapping>
     <servlet-name>Cooky</servlet-name>
     <url-pattern>/cookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestBDD</servlet-name>
+    <url-pattern>/bdd</url-pattern>
   </servlet-mapping>  
   <jsp-config>
     <jsp-property-group>
