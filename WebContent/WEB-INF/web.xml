@@ -21,6 +21,11 @@
     <servlet-name>TestBDD</servlet-name>
     <servlet-class>com.ocr.servlets.TestBDD</servlet-class>
   </servlet>  
+  
+  <servlet>
+    <servlet-name>TestDAO</servlet-name>
+    <servlet-class>com.ocr.servlets.TestDAO</servlet-class>
+  </servlet>  
   <servlet>
     <servlet-name>FileMe</servlet-name>
     <servlet-class>com.ocr.servlets.FileMe</servlet-class>
@@ -55,6 +60,10 @@
     <servlet-name>TestBDD</servlet-name>
     <url-pattern>/bdd</url-pattern>
   </servlet-mapping>  
+    <servlet-mapping>
+    <servlet-name>TestDAO</servlet-name>
+    <url-pattern>/dao</url-pattern>
+  </servlet-mapping> 
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>

@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ocr.beans.BeanException;
 import com.ocr.beans.User;
 
 /**
@@ -40,7 +41,12 @@ public class Names {
                 String prenom = resultat.getString("prenom");
                 
                 User user = new User();
-                user.setName(nom);
+                try {
+					user.setName(nom);
+				} catch (BeanException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 user.setFirstname(prenom);
                 
                 users.add(user);
@@ -70,7 +76,7 @@ public class Names {
         }
 
         try {
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "1234");
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "test", "1234");
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ocr.bdd.Names;
+import com.ocr.beans.BeanException;
 import com.ocr.beans.User;
 
 /**
@@ -41,7 +42,12 @@ public class TestBDD extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = new  User();
-        user.setName(request.getParameter("name"));
+        try {
+			user.setName(request.getParameter("name"));
+		} catch (BeanException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         user.setFirstname(request.getParameter("firstname"));
         
         Names namesTable = new Names();
